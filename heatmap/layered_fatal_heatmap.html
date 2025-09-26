@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_76fb2f3f75027202aebe66eaae59ca1b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_76fb2f3f75027202aebe66eaae59ca1b" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_76fb2f3f75027202aebe66eaae59ca1b = L.map(
+                "map_76fb2f3f75027202aebe66eaae59ca1b",
+                {
+                    center: [52.6959996367625, -1.5461231855443944],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_db46624fe2065eb334317e0a6bf7a0b1 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_db46624fe2065eb334317e0a6bf7a0b1.addTo(map_76fb2f3f75027202aebe66eaae59ca1b);
+        
+    
+            var feature_group_17d2d7cf72503111cab723c236587ffe = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var heat_map_2f316c8987fecbc71d5643bfce512e24 = L.heatLayer(
+                [[52.224824, -1.063885], [52.158811, -0.964694], [52.189288, -0.876067], [52.021566, -1.150768], [52.083134, -1.268393], [52.052884, -1.117943], [52.212064, -1.020537], [51.998362, -1.137369], [52.210081, -0.946818], [52.18935, -0.93107], [52.155134, -1.007608], [52.089168, -1.314855], [52.178347, -1.076122], [52.061618, -1.308421], [52.225882, -0.995783], [52.172981, -0.872529], [52.138521, -0.83307], [52.19838, -0.915636], [52.21064, -0.949], [52.178912, -0.862873], [52.044646, -1.198157], [52.114896, -1.045305], [52.164344, -1.257559], [52.224846, -0.990243], [52.169914, -0.959464], [52.023036, -1.155112], [52.03634, -1.142324], [52.166973, -0.855574]],
+                {
+  "minOpacity": 0.5,
+  "maxZoom": 18,
+  "radius": 25,
+  "blur": 15,
+}
+            );
+        
+    
+            heat_map_2f316c8987fecbc71d5643bfce512e24.addTo(feature_group_17d2d7cf72503111cab723c236587ffe);
+        
+    
+            feature_group_17d2d7cf72503111cab723c236587ffe.addTo(map_76fb2f3f75027202aebe66eaae59ca1b);
+        
+    
+            var feature_group_3859cc1602aab9ce7de0b20abaaff1fa = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var heat_map_3e37ef191dc01a7c3307e60d78044831 = L.heatLayer(
+                [[51.075433, -1.823253], [51.171166, -1.865084], [51.22762, -1.967172], [51.120786, -1.788217], [51.178535, -1.752187], [51.103033, -2.18093], [50.995733, -1.651134], [51.016808, -2.094772], [51.181833, -1.783073], [51.176842, -1.808417], [51.186956, -1.73769], [51.200096, -1.704697], [51.09604, -1.833457], [50.969196, -1.619289], [51.03143, -1.71675], [51.15111, -2.286348], [51.164397, -2.295012], [51.105363, -2.312347], [51.05562, -1.869129], [50.96427, -2.119016], [51.055963, -1.991978], [51.195688, -1.786729], [51.217449, -1.94198], [51.021371, -1.762721], [50.985396, -1.759771], [51.095262, -2.25016], [51.097562, -2.224181], [51.159005, -1.952778], [51.192366, -1.953173], [51.094037, -2.233445], [51.095619, -2.145486]],
+                {
+  "minOpacity": 0.5,
+  "maxZoom": 18,
+  "radius": 25,
+  "blur": 15,
+}
+            );
+        
+    
+            heat_map_3e37ef191dc01a7c3307e60d78044831.addTo(feature_group_3859cc1602aab9ce7de0b20abaaff1fa);
+        
+    
+            feature_group_3859cc1602aab9ce7de0b20abaaff1fa.addTo(map_76fb2f3f75027202aebe66eaae59ca1b);
+        
+    
+            var layer_control_329902d5a1f7ce2adf4939e656bd2a0c_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_db46624fe2065eb334317e0a6bf7a0b1,
+                },
+                overlays :  {
+                    "South Northamptonshire Fatal Accidents (28)" : feature_group_17d2d7cf72503111cab723c236587ffe,
+                    "Salisbury Fatal Accidents (31)" : feature_group_3859cc1602aab9ce7de0b20abaaff1fa,
+                },
+            };
+            let layer_control_329902d5a1f7ce2adf4939e656bd2a0c = L.control.layers(
+                layer_control_329902d5a1f7ce2adf4939e656bd2a0c_layers.base_layers,
+                layer_control_329902d5a1f7ce2adf4939e656bd2a0c_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_76fb2f3f75027202aebe66eaae59ca1b);
+
+        
+</script>
+</html>
